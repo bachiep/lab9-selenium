@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /home/hatch/workspace/projects/lab9-selenium/venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.3', 'Platform': 'Linux-7.0.0-39-generic-x86_64-with-glibc2.39', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.7.0'}, 'Plugins': {'metadata': '3.1.1', 'html': '4.2.0'}}
+rootdir: /home/hatch/workspace/projects/lab9-selenium
+configfile: pytest.ini
+plugins: metadata-3.1.1, html-4.2.0
+collecting ... collected 6 items
+
+tests/test_saucedemo.py::test_tc01_login_success PASSED                  [ 16%]
+tests/test_saucedemo.py::test_tc02_login_failure PASSED                  [ 33%]
+tests/test_saucedemo.py::test_tc03_add_to_cart PASSED                    [ 50%]
+tests/test_saucedemo.py::test_tc04_remove_from_cart PASSED               [ 66%]
+tests/test_saucedemo.py::test_tc05_sort_by_price_low_to_high PASSED      [ 83%]
+tests/test_saucedemo.py::test_tc06_checkout_complete_and_logout PASSED   [100%]
+
+- Generated html report: file:///home/hatch/workspace/projects/lab9-selenium/reports/report.html -
+============================== 6 passed in 44.87s ==============================
