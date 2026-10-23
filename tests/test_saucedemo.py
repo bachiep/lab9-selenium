@@ -13,9 +13,6 @@ Gồm 06 test case:
     TC04 - Xoá sản phẩm khỏi giỏ hàng
     TC05 - Sắp xếp sản phẩm theo giá tăng dần
     TC06 - Checkout hoàn chỉnh và đăng xuất
-
-Mỗi test đều chụp ảnh màn hình thật bằng driver.save_screenshot() tại
-bước kiểm chứng và lưu vào thư mục screenshots/.
 """
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC

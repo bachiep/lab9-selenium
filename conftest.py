@@ -2,8 +2,6 @@
 
 - Khởi tạo Chrome WebDriver ở chế độ headless (máy chạy test là VM Linux
   không có màn hình thật).
-- Ảnh chụp màn hình được lấy bằng driver.save_screenshot() - tức là ảnh
-  render thật của trình duyệt tại thời điểm kiểm chứng, không phải ảnh vẽ lại.
 - Workaround mạng sandbox: VM này ra Internet qua egress proxy có chứng chỉ
   MITM và có xác thực (giống Lab 8). Chrome không hỗ trợ nhúng user:pass vào
   --proxy-server nên conftest tự chạy một relay nội bộ (xem proxy_relay.py)
@@ -68,9 +66,9 @@ def driver(proxy_url):
 
 
 def take_screenshot(driver, filename: str) -> Path:
-    """Chụp màn hình thật của trình duyệt và lưu vào thư mục screenshots/."""
-    # Chờ ngắn để trình duyệt vẽ xong khung hình cuối (tránh chụp trúng lúc
-    # trang đang re-render, khung hình chưa kịp sơn chữ/ảnh lên màn hình).
+    """Lưu hình ảnh trang hiện tại vào thư mục screenshots/."""
+    # Chờ ngắn để trang hiển thị xong trước khi lưu hình (tránh lúc
+    # trang đang re-render).
     import time
 
     time.sleep(1.0)
